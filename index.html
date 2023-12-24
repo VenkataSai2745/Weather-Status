@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!--container is an outer div-->
+
+    <div class="container">
+        <!--main is an child div for container and parent div for section1 section2 and section3-->
+        <div class="main">
+            <!--Section1 div conatins input element and button to search and an search icon-->
+            <div class="section1">
+                <input type="text" class="locationName" placeholder="Enter Location Name">
+                <button class="btn"> <p>Search</p><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+            </div>
+
+            <!--section2 contains two divs names one and two-->
+            <div class="section2">
+                <!--div one contains temperature city name and humidity-->
+                <div class="one">
+                    <p class="temperature">Temperature &#8451</p>
+                    <p class="cityName">City name</p>
+                    <p class="humidity">Humudity</p>
+                </div>
+
+                <!--div two contains overcats coordinates and wind speed-->
+                <div class="two">
+
+                    <div class="overCast"></div>
+                    <p class="longitude">longitude</p><br>
+                    <p class="latitude">latitude</p>
+                    <div class="windSpeed"></div>
+                </div>
+            </div>
+
+            <!--section3 is used to display error message -->
+            <div class="section3">
+                <p class="errorMsg"></p>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
