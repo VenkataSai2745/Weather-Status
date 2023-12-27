@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Wave 360</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +21,23 @@
 
     <div class="container">
         <!--main is an child div for container and parent div for section1 section2 and section3-->
+        <!-- <h1 style="text-align: center;">Weather Wave </h1> -->
         <div class="main">
+            
+            <!-- <p>Enter the place name and click search</p> -->
             <!--Section1 div conatins input element and button to search and an search icon-->
             <div class="section1">
-                <input type="text" class="locationName" placeholder="Enter Location Name">
-                <button class="btn"> <p>Search</p><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+                <input type="text" id="cityInput" class="locationName" placeholder="Enter Location Name">
+                <button class="btn">
+                    <p>Search</p><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                </button>
+            </div>
+        </div>
+        <div class="main2">
+
+            <div class="suggestions">
+
+                <ul id="suggestionsList"></ul>
             </div>
 
             <!--section2 contains two divs names one and two-->
@@ -44,26 +57,21 @@
                     <p class="latitude">latitude</p>
                     <div class="windSpeed"></div>
                 </div>
+
+                <!--section3 is used to display error message -->
             </div>
 
-            <!--section3 is used to display error message -->
             <div class="section3">
                 <p class="errorMsg"></p>
             </div>
-
-
-
-
         </div>
-
-
+     
 
 
 
     </div>
-
-
     <script src="script.js"></script>
+    <script src="suggestions.js"></script>
 </body>
 
 </html>

@@ -12,6 +12,8 @@ btn.addEventListener("click", async () => {
     //accessing input value and some other elements form the html file
     const txt = document.querySelector(".locationName");
     const city = txt.value;
+      const words =city.split(",");
+      console.log(words[0]);  
     const temp = document.querySelector(".temperature");
     const humidity = document.querySelector(".humidity");
     const lon = document.querySelector(".longitude");
@@ -33,16 +35,16 @@ btn.addEventListener("click", async () => {
 
     //condition for input value and displaying alert if input alue is null
     if (txt.value === "") {
-    document.querySelector(".section3").style.display = "none";
-    sectionTwo.style.display = "none";
+    // document.querySelector(".section3").style.display = "none";
+    // sectionTwo.style.display = "none";
       alert("Enter The Details");
     }
 
     //condition if input value is not null and changing the values for the html file
     else {
+      
       sectionTwo.style.display = "flex";
       document.querySelector(".section3").style.display = "none";
-
       sectionTwo.style.justifyContent = "space-around";
       let temperature = Math.round(data.main.temp - 273.15);
       cityName.innerHTML = ` ${data.name}, ${data.sys.country} `;
@@ -50,10 +52,10 @@ btn.addEventListener("click", async () => {
       lon.innerHTML = `Long: ${data.coord.lon} `;
       lat.innerHTML = `Lat:   ${data.coord.lat} `;
       temp.innerHTML = `${temperature} &#8451`;
-      overCast.innerHTML = `Overcast: ${data.weather[0].description}`;
-      
+      overCast.innerHTML = `Overcast: ${data.weather[0].description}`;    
       windSpeed.innerHTML = `Wind Speed: ${Math.round(data.wind.speed*3.6)} km/hr`
       txt.value = "";
+     
 
     }
   }
